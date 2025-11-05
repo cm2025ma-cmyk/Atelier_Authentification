@@ -7,14 +7,16 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     header('Location: page_admin.php'); // Si l'utilisateur s'est déjà connecté alors il sera automatiquement redirigé vers la page protected.php
     exit();
 }
-if (!isset($NbSessionAdmin))
-{
-    $NbSessionAdmin=0;
+// Initialiser à 0 si pas définie
+if (!isset($_NbSessionAdmin)) {
+    $_NbSessionAdmin = 0;
 }
-if (!sset($NbSessionUser))
-{
-    $NbSessionUser=0;
+
+// Initialiser à 0 si pas définie
+if (!isset($_NbSessionAdmin)) {
+    $_NbSessionUser = 0;
 }
+
 // Gérer le formulaire de connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
