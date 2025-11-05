@@ -6,6 +6,8 @@ session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header('Location: index.php'); // Dans le cas contraire, l'utilisateur sera redirigé vers la page de connexion
     exit();
+} else {
+    $NbSessionAdmin++;
 }
 ?>
 
