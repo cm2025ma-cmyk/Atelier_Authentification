@@ -11,6 +11,10 @@ if (!isset($NbSessionAdmin))
 {
     $NbSessionAdmin=0;
 }
+if (!sset($NbSessionUser))
+{
+    $NbSessionUser=0;
+}
 // Gérer le formulaire de connexion
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
