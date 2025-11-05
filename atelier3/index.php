@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Stocker les informations utilisateur dans la session
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        $_NbSessionAdmin++;
+        $NbSessionAdmin=NbSessionAdmin+1;
 
         // Rediriger vers la page protégée
         header('Location: page_admin.php');
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Stock info user
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        $_NBSessionUser++;
+        $NBSessionUser=NbSessionUser+1;
 
         header('Location: page_user.php');
     } else {
