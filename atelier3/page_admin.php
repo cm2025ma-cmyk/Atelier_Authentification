@@ -19,6 +19,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <body>
     <h1>Bienvenue sur la page administrateur de l'atelier 3</h1>
     <p>Vous êtes connecté en tant que : <?php echo htmlspecialchars($_SESSION['username']); ?></p>
+    <p>Nombre de session en cours : <?php echo htmlspecialchars($_SESSION['$_NbSessionAdmin']); ?> </p>    
     <a href="logout.php">Se déconnecter</a>
 </body>
 </html>
