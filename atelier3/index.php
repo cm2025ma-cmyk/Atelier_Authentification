@@ -22,6 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Rediriger vers la page protégée
         header('Location: page_admin.php');
         exit();
+    } else if($username === 'user' && $password ==='secret') {
+        // Stock info user
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
+
+        header('Location: page_user.php');
     } else {
         $error = "Nom d'utilisateur ou mot de passe incorrect.";
     }
